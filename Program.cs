@@ -36,80 +36,132 @@ using System.Text;
 // #endregion
 
 
-#region Problem 2
+// #region Problem 2
 
 
-System.Console.WriteLine("Problem 2:");
+// System.Console.WriteLine("Problem 2:");
 
-double price =0.0;
-double BasePrice =0;
-double Discount =0;
-double weekendExtra=0;
+// double price =0.0;
+// double BasePrice =0;
+// double Discount =0;
+// double weekendExtra=0;
 
-System.Console.WriteLine("Enter Your Age:");
-int Age;
-while (!int.TryParse(Console.ReadLine(), out Age))
-{
-    System.Console.WriteLine("Invalid input. Please enter a valid age:");
-}
-if (Age < 5)
-{
-    System.Console.WriteLine($"Price is Free");
-    // return;
-}else if (Age >= 5 && Age <= 12)
-{
-    BasePrice = 30;
-    System.Console.WriteLine($"Base Price: {BasePrice}");
-}
-else if (Age > 12 && Age <= 59)
-{
-    BasePrice = 50;
-    System.Console.WriteLine($"Base Price: {BasePrice}");
-}
-else
-{
-    BasePrice = 25;
-    System.Console.WriteLine($"Base Price: {BasePrice}");
-}
-price= BasePrice;
+// System.Console.WriteLine("Enter Your Age:");
+// int Age;
+// while (!int.TryParse(Console.ReadLine(), out Age))
+// {
+//     System.Console.WriteLine("Invalid input. Please enter a valid age:");
+// }
+// if (Age < 5)
+// {
+//     System.Console.WriteLine($"Price is Free");
+//     // return;
+// }else if (Age >= 5 && Age <= 12)
+// {
+//     BasePrice = 30;
+//     System.Console.WriteLine($"Base Price: {BasePrice}");
+// }
+// else if (Age > 12 && Age <= 59)
+// {
+//     BasePrice = 50;
+//     System.Console.WriteLine($"Base Price: {BasePrice}");
+// }
+// else
+// {
+//     BasePrice = 25;
+//     System.Console.WriteLine($"Base Price: {BasePrice}");
+// }
+// price= BasePrice;
 
-System.Console.WriteLine("Enter The Numeber Of Days:");
+// System.Console.WriteLine("Enter The Numeber Of Days:");
 
-System.Console.WriteLine($@"1.sunday
-2.monday
-3.tuesday
-4.wednesday
-5.thursday
-6.friday
-7.saturday");
-int day;
-while (!int.TryParse(Console.ReadLine(), out day) || day < 1 || day > 7)
-{
-    System.Console.WriteLine("Invalid input. Please enter a valid day number (1-7):");
-}
-if(price >0 && (day==6||day == 7))
-{
+// System.Console.WriteLine($@"1.sunday
+// 2.monday
+// 3.tuesday
+// 4.wednesday
+// 5.thursday
+// 6.friday
+// 7.saturday");
+// int day;
+// while (!int.TryParse(Console.ReadLine(), out day) || day < 1 || day > 7)
+// {
+//     System.Console.WriteLine("Invalid input. Please enter a valid day number (1-7):");
+// }
+// if(price >0 && (day==6||day == 7))
+// {
     
-    weekendExtra =10;
-    price = price + weekendExtra;
-}
+//     weekendExtra =10;
+//     price = price + weekendExtra;
+// }
 
-if(price >25){
-System.Console.WriteLine("Are you Student? (yes/no)");
-string isStudent = Console.ReadLine().Trim().ToLower();
-if (isStudent == "y" ||isStudent=="yes" && price > 0)
-{
+// if(price >0 ){
+// System.Console.WriteLine("Are you Student? (yes/no)");
+// string isStudent = Console.ReadLine().Trim().ToLower();
+// if (isStudent == "y" ||isStudent=="yes" && price > 0)
+// {
     
-    Discount = price * 0.20;
-    price = price - Discount;
-}
-}
+//     Discount = price * 0.20;
+//     price = price - Discount;
+// }
+// }
 
 
 
-System.Console.WriteLine($"The Main Price: {BasePrice}");
-System.Console.WriteLine($"The Weekend Extra: {weekendExtra}");
-System.Console.WriteLine($"The Discount: {Discount}");
-System.Console.WriteLine($"The Final Price: {price}");
+// System.Console.WriteLine($"The Main Price: {BasePrice}");
+// System.Console.WriteLine($"The Weekend Extra: {weekendExtra}");
+// System.Console.WriteLine($"The Discount: {Discount}");
+// System.Console.WriteLine($"The Final Price: {price}");
 
+// #endregion
+
+
+#region Problem 3
+
+System.Console.WriteLine("Problem 3:");
+
+// string FileExtension = ".jpg";
+// string FileType ;
+
+// switch (FileExtension.ToLower())
+
+// {
+//     case "pdf":
+//     FileType ="PDF Document";
+//     break;
+//     case ".docx":
+//     case ".doc":
+//     FileType ="Word Document";
+//     break;
+//     case ".xlsx":
+//     case ".xls":
+//     FileType ="Excel Spreadsheet";
+//     break;
+//     case ".jpg":
+//     case ".png":
+//     case ".gif":
+//     FileType ="Image File";
+//     break;
+//     default:
+//     FileType ="Unknown File Type";
+//     break;
+
+// }
+
+
+
+string FileExtension = ".jpg";
+string FileType = FileExtension switch 
+    {
+        ".pdf" => "PDF Document",
+        ".docx" or ".doc" => "Word Document",
+        ".xlsx" or ".xls" => "Excel Spreadsheet",
+        ".jpg" or ".png" or ".gif" => "Image File",
+        _ => "Unknown File Type"
+    
+    };
+
+System.Console.WriteLine($"The File Type is: {FileType}");
+
+
+    
 #endregion
