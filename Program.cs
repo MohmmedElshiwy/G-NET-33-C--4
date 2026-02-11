@@ -166,18 +166,87 @@ using System.Text;
     
 // #endregion
 
-#region Problem 4
+// #region Problem 4
     
-    Console.WriteLine("Problem 4:");
+//     Console.WriteLine("Problem 4:");
     
-    int temperature = 0;
-    string weatherAdvice = temperature <0 ? "Freezing ! Stay indoor " 
-    : temperature <15 ? "Cold ! Wear a jacket" 
-    : temperature <25 ? "Pleasant weather" 
-    :temperature > 35 ? "Warm . Stay hydrated"
-    :"Hot ! Avoid Sun Exposure";
+//     int temperature = 0;
+//     string weatherAdvice = temperature <0 ? "Freezing ! Stay indoor " 
+//     : temperature <15 ? "Cold ! Wear a jacket" 
+//     : temperature <25 ? "Pleasant weather" 
+//     :temperature  <35 ? "Warm . Stay hydrated"
+//     :"Hot ! Avoid Sun Exposure";
 
-    System.Console.WriteLine($"Weather Advice: {weatherAdvice}");
+//     System.Console.WriteLine($"Weather Advice: {weatherAdvice}");
 
+//     // the ternary operator in this case is not the best choise beacuse it can be hard to read and understand 
+//     // the ternary operator could be used for less than 2 conditions, 
+// #endregion
+
+#region  Problem 5
+
+System.Console.WriteLine("Problem 5:");
+
+int level = 0;
+int maxLevel = 5;
+bool IsValid = false;
+
+do
+{
+   System.Console.WriteLine("Enter your password:");
+   
+   string password = Console.ReadLine().Trim();
+   bool Upper =false;
+bool Degit =false;
+bool Space =false;
+
+   foreach(char c in password)
+    {
+        if (char.IsUpper(c))
+        {
+            Upper = true;
+        }
+        else if (char.IsDigit(c))
+        {
+            Degit =true;
+        }
+        else if (char.IsWhiteSpace(c))
+        {
+            Space = true;
+        }
+
+    } 
+                Console.WriteLine("---- Validation Result ----");
+    if (password.Length < 8)
+    {
+        System.Console.WriteLine("Password Length: Invalid (Less than 8 characters)");
+    }
+    if (!Upper)
+    {
+        System.Console.WriteLine("Password must contain at least one uppercase letter.");
+    }
+    if (!Degit)    {
+        System.Console.WriteLine("Password must contain at least one digit.");
+    }
+    if (Space)    {
+        System.Console.WriteLine("Password must not contain spaces.");
+    }
+    IsValid = password.Length>=8 && Upper && Degit && !Space;
+    if (IsValid)    {
+        System.Console.WriteLine("Password is valid.");
+        break;
+    }
+    level++;
+    if (level == maxLevel)
+            {
+                Console.WriteLine("🚫 Account locked.");
+            }
+            else
+            {
+                Console.WriteLine($"Attempts left: {maxLevel - level}");
+                Console.WriteLine();
+            }
+}while (level < maxLevel);
 #endregion
+
 
