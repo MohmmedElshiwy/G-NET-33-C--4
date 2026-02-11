@@ -12,3 +12,4 @@
 /media/kiro/3AD0C0D1587627C5/BackEnd/Root/Assin/c-sharp/G-NET-33-C--4/obj/Debug/net10.0/G-NET-33-C--4.pdb
 /media/kiro/3AD0C0D1587627C5/BackEnd/Root/Assin/c-sharp/G-NET-33-C--4/obj/Debug/net10.0/G-NET-33-C--4.genruntimeconfig.cache
 /media/kiro/3AD0C0D1587627C5/BackEnd/Root/Assin/c-sharp/G-NET-33-C--4/obj/Debug/net10.0/ref/G-NET-33-C--4.dll
+/media/kiro/3AD0C0D1587627C5/BackEnd/Root/Assin/c-sharp/G-NET-33-C--4/obj/Debug/net10.0/G-NET-33-C--4.sourcelink.json
