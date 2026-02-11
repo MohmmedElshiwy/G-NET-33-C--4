@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("G-NET-33-C--4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d9ea8f84e983b2bb52e2913272f56b3192ebcec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe596c93d53dd4e61728c15286060bb18f6dd3e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("G-NET-33-C--4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("G-NET-33-C--4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

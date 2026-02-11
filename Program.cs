@@ -115,9 +115,9 @@ using System.Text;
 // #endregion
 
 
-#region Problem 3
+// #region Problem 3
 
-System.Console.WriteLine("Problem 3:");
+// System.Console.WriteLine("Problem 3:");
 
 // string FileExtension = ".jpg";
 // string FileType ;
@@ -149,19 +149,35 @@ System.Console.WriteLine("Problem 3:");
 
 
 
-string FileExtension = ".jpg";
-string FileType = FileExtension switch 
-    {
-        ".pdf" => "PDF Document",
-        ".docx" or ".doc" => "Word Document",
-        ".xlsx" or ".xls" => "Excel Spreadsheet",
-        ".jpg" or ".png" or ".gif" => "Image File",
-        _ => "Unknown File Type"
+// string FileExtension = ".jpg";
+// string FileType = FileExtension switch 
+//     {
+//         ".pdf" => "PDF Document",
+//         ".docx" or ".doc" => "Word Document",
+//         ".xlsx" or ".xls" => "Excel Spreadsheet",
+//         ".jpg" or ".png" or ".gif" => "Image File",
+//         _ => "Unknown File Type"
     
-    };
+//     };
 
-System.Console.WriteLine($"The File Type is: {FileType}");
+// System.Console.WriteLine($"The File Type is: {FileType}");
 
 
     
+// #endregion
+
+#region Problem 4
+    
+    Console.WriteLine("Problem 4:");
+    
+    int temperature = 0;
+    string weatherAdvice = temperature <0 ? "Freezing ! Stay indoor " 
+    : temperature <15 ? "Cold ! Wear a jacket" 
+    : temperature <25 ? "Pleasant weather" 
+    :temperature > 35 ? "Warm . Stay hydrated"
+    :"Hot ! Avoid Sun Exposure";
+
+    System.Console.WriteLine($"Weather Advice: {weatherAdvice}");
+
 #endregion
+
