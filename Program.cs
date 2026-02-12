@@ -183,70 +183,135 @@ using System.Text;
 //     // the ternary operator could be used for less than 2 conditions, 
 // #endregion
 
-#region  Problem 5
+// #region  Problem 5
 
-System.Console.WriteLine("Problem 5:");
+// System.Console.WriteLine("Problem 5:");
 
-int level = 0;
-int maxLevel = 5;
-bool IsValid = false;
+// int level = 0;
+// int maxLevel = 5;
+// bool IsValid = false;
 
-do
-{
-   System.Console.WriteLine("Enter your password:");
+// do
+// {
+//    System.Console.WriteLine("Enter your password:");
    
-   string password = Console.ReadLine().Trim();
-   bool Upper =false;
-bool Degit =false;
-bool Space =false;
+//    string password = Console.ReadLine().Trim();
+//    bool Upper =false;
+// bool Degit =false;
+// bool Space =false;
 
-   foreach(char c in password)
-    {
-        if (char.IsUpper(c))
-        {
-            Upper = true;
-        }
-        else if (char.IsDigit(c))
-        {
-            Degit =true;
-        }
-        else if (char.IsWhiteSpace(c))
-        {
-            Space = true;
-        }
+//    foreach(char c in password)
+//     {
+//         if (char.IsUpper(c))
+//         {
+//             Upper = true;
+//         }
+//         else if (char.IsDigit(c))
+//         {
+//             Degit =true;
+//         }
+//         else if (char.IsWhiteSpace(c))
+//         {
+//             Space = true;
+//         }
 
-    } 
-                Console.WriteLine("---- Validation Result ----");
-    if (password.Length < 8)
+//     } 
+//                 Console.WriteLine("---- Validation Result ----");
+//     if (password.Length < 8)
+//     {
+//         System.Console.WriteLine("Password Length: Invalid (Less than 8 characters)");
+//     }
+//     if (!Upper)
+//     {
+//         System.Console.WriteLine("Password must contain at least one uppercase letter.");
+//     }
+//     if (!Degit)    {
+//         System.Console.WriteLine("Password must contain at least one digit.");
+//     }
+//     if (Space)    {
+//         System.Console.WriteLine("Password must not contain spaces.");
+//     }
+//     IsValid = password.Length>=8 && Upper && Degit && !Space;
+//     if (IsValid)    {
+//         System.Console.WriteLine("Password is valid.");
+//         break;
+//     }
+//     level++;
+//     if (level == maxLevel)
+//             {
+//                 Console.WriteLine("🚫 Account locked.");
+//             }
+//             else
+//             {
+//                 Console.WriteLine($"Attempts left: {maxLevel - level}");
+//                 Console.WriteLine();
+//             }
+// }while (level < maxLevel);
+// #endregion
+
+
+#region problem 6
+
+System.Console.WriteLine("Problem 6:");
+
+int [] scores = { 85, 91, 67, 55, 78,39,88,72,95,60,48 };
+
+int i = 0;
+
+while(i < scores.Length)
+{
+    if (scores[i] <= 50)
     {
-        System.Console.WriteLine("Password Length: Invalid (Less than 8 characters)");
+        System.Console.WriteLine($"Score {scores[i]} is below 50.");
     }
-    if (!Upper)
+    i++;
+}
+    Console.WriteLine("First score above 90:");
+int j =0;
+while (j < scores.Length)
+{
+    if (scores[j] >= 90)
     {
-        System.Console.WriteLine("Password must contain at least one uppercase letter.");
-    }
-    if (!Degit)    {
-        System.Console.WriteLine("Password must contain at least one digit.");
-    }
-    if (Space)    {
-        System.Console.WriteLine("Password must not contain spaces.");
-    }
-    IsValid = password.Length>=8 && Upper && Degit && !Space;
-    if (IsValid)    {
-        System.Console.WriteLine("Password is valid.");
+        System.Console.WriteLine($"Score {scores[j]} is above 90.");
         break;
     }
-    level++;
-    if (level == maxLevel)
-            {
-                Console.WriteLine("🚫 Account locked.");
-            }
-            else
-            {
-                Console.WriteLine($"Attempts left: {maxLevel - level}");
-                Console.WriteLine();
-            }
-}while (level < maxLevel);
+    j++;
+}
+
+
+System.Console.WriteLine("Avg score abouve 40");
+
+int sum = 0;
+int count = 0;
+while (count < scores.Length)
+{
+    if (scores[count] > 40)
+    {
+        sum += scores[count];
+    }
+    count++;
+}
+double Avg = count > 0 ? sum / count : 0;
+System.Console.WriteLine($"The Average Score above 40 is: {Avg}");
+
+int a =0,b=0,c=0,d=0,f =0;
+int k=0;
+while (k < scores.Length)
+{
+    if(scores[k]>=90)
+    a++;
+    else if (scores[k]>=80)
+    b++;
+    else if (scores[k]>=70)
+    c++;
+    else if (scores[k]>=60)
+    d++;
+    else f++;
+    k++;
+}
+System.Console.WriteLine($"Number of scores above 90: {a}");
+System.Console.WriteLine($"Number of scores between 80 and 89: {b}");
+System.Console.WriteLine($"Number of scores between 70 and 79: {c}");
+System.Console.WriteLine($"Number of scores between 60 and 69: {d}");
+System.Console.WriteLine($"Number of scores below 60: {f}");
 #endregion
-
-
